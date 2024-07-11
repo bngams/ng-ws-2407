@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrl: './welcome.component.scss'
+  template: `
+    <p>Welcome {{ name }} </p>
+  `
 })
 export class WelcomeComponent {
   @Input()
