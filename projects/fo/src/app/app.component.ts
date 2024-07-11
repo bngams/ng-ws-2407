@@ -11,15 +11,7 @@ import { MenuItems } from './models/menu-item';
 export class AppComponent {
   myMenuItems: MenuItems = [
     { path: '', label: 'Home'},
-    { path: '', label: 'Syntax'},
-    { path: '', label: 'Other'}
+    { path: '/template-syntax', label: 'Template syntax'},
+    { path: '/other', label: 'Other'}
   ];
-  title = 'fo';
-  today = new Date();
-  loading = true;
-  words = ['Hello', 'world'];
-
-  toggleLoading() {
-    this.loading = !this.loading;
-  }
 }

@@ -11,12 +11,18 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './components/header/header.component';
 import { WelcomeComponent } from './components/welcome.component';
+import { TemplateSyntaxComponent } from './pages/template-syntax/template-syntax.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TemplateSyntaxComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule, // inside this we have native pipes...

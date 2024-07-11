@@ -7,7 +7,9 @@
     <span class="example-spacer"></span>
     <ul>
       @for (item of menuItems; track item) {
-        <li>{{ item.label }}</li>
+        <li>
+          <a [routerLink]="item.path">{{ item.label }}</a>
+        </li>
       }
     </ul>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
