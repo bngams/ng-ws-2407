@@ -3,7 +3,7 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <app-welcome [name]="'Boris'" ></app-welcome>
     <span class="example-spacer"></span>
     <ul>
       @for (item of menuItems; track item) {
