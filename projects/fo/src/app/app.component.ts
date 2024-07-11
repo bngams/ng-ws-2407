@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItems } from './models/menu-item';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  myMenuItems: MenuItems = [
+    { path: '', label: 'Home'},
+    { path: '', label: 'Syntax'},
+    { path: '', label: 'Other'}
+  ];
   title = 'fo';
   today = new Date();
   loading = true;
