@@ -6,31 +6,41 @@ import { StarPipe } from './pipes/star.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './components/header/header.component';
 import { WelcomeComponent } from './components/welcome.component';
 import { TemplateSyntaxComponent } from './pages/template-syntax/template-syntax.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MATERIAL_MODULES } from './material.barrel';
+
+const STANDALONE_PIPES_DIRECTIVES = [
+  StarPipe,
+  ReversePipe,
+  HighlightDirective,
+];
+
+const PAGE_COMPONENTS = [
+  TemplateSyntaxComponent,
+  HomeComponent,
+  NotFoundComponent
+];
+
+const COMPONENTS = [
+  HeaderComponent,
+  WelcomeComponent,
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    WelcomeComponent,
-    TemplateSyntaxComponent,
-    HomeComponent,
-    NotFoundComponent
+    ...COMPONENTS,
+    ...PAGE_COMPONENTS
   ],
   imports: [
     BrowserModule, // inside this we have native pipes...
-    StarPipe,
-    ReversePipe,
-    HighlightDirective,
-    MatToolbarModule, MatButtonModule, MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ...STANDALONE_PIPES_DIRECTIVES,
+    ...MATERIAL_MODULES
   ],
   providers: [
     provideAnimationsAsync()
