@@ -5,7 +5,8 @@ import { TemplateSyntaxComponent } from './pages/template-syntax/template-syntax
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent},
   { path: 'template-syntax', component: TemplateSyntaxComponent},
   { path: '**', component: NotFoundComponent}
 ];

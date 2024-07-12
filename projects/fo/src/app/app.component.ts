@@ -10,7 +10,7 @@ import { MenuItems } from './models/menu-item';
 })
 export class AppComponent {
   myMenuItems: MenuItems = [
-    { path: '', label: 'Home'},
+    { path: '/home', label: 'Home'},
     { path: '/template-syntax', label: 'Template syntax'},
     { path: '/other', label: 'Other'}
   ];
